@@ -41,6 +41,7 @@ body {
 }
 
 .dashboard_container {
+  overflow-y: scroll;
   width: 25%;
   height: 100%;
   background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
@@ -69,6 +70,12 @@ body {
   height: 120px;
 }
 
+.logo_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .description_container {
   margin: 0 40px;
 }
@@ -80,7 +87,6 @@ body {
 }
 
 .personal_code_container {
-  height: 110px;
   margin: 0 40px;
   background: rgba(196, 196, 196, 0.2);
   background-filter: blur(80px);
@@ -97,24 +103,27 @@ body {
 .personal_code_title_paragraph {
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 0;
 }
 
 .personal_code_value_container {
   display: flex;
   justify-content: space-between;
-  margin: 0 25px;
+  margin: 0 25px 5px;
   align-items: center;
 }
 
 .personal_code_value_paragraph {
   font-size: 18px;
   font-weight: 700;
+  word-break: break-all;
 }
 
 .personal_code_copy_button {
   width: 40px;
   height: 40px;
   border-radius: 8px;
+  margin-left: 10px;
   background: white;
   transition: 0.5s;
 }
@@ -183,14 +192,14 @@ body {
 
 .checkbox_container {
   display: flex;
-  margin: 0 40px;
-  margin-bottom: 25px;
+  margin: 0 40px 25px;
   align-items: center;
 }
 
 .checkbox_connection {
-  width: 30px;
-  height: 30px;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
   background: rgba(196, 196, 196, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
@@ -202,7 +211,7 @@ body {
 
 .checkbox_container_paragraph {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   margin-left: 15px;
 }
 
@@ -215,8 +224,7 @@ body {
   position: relative;
 }
 .new_message_input {
-  margin: 0 40px;
-  margin-bottom: 30px;
+  margin: 0 40px 30px;
   width: calc(100% - 80px);
   height: 60px;
   color: #676f7a;
@@ -253,6 +261,7 @@ body {
   padding: 20px 13px;
   color: #545c68;
   min-width: 60px;
+  word-break: break-word;
 }
 
 .message_right_container {
@@ -268,6 +277,7 @@ body {
   padding: 20px 13px;
   color: #ffffff;
   min-width: 60px;
+  word-break: break-word;
 }
 
 .send_message_button {
@@ -474,4 +484,175 @@ body {
 
 .display_none {
   display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .logo_container {
+    margin-left: 20px;
+  }
+
+  .description_container {
+    margin: 0 20px;
+  }
+
+  .personal_code_container {
+    margin: 0 20px;
+  }
+
+  .personal_code_connecting_container {
+    margin: 0 20px;
+  }
+
+  .stranger_connecting_container {
+    margin: 0 20px;
+  }
+
+  .checkbox_container {
+    margin: 0 20px 25px;
+  }
+
+  .personal_code_connecting_input_container input {
+    padding: 0 10px;
+  }
+
+  .messages_container {
+    margin: 20px 15px;
+  }
+
+  .new_message_input {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    padding: 0 10px 0 10px;
+  }
+
+  .send_message_button {
+    right: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main_container {
+    flex-direction: column;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: auto;
+  }
+
+  .dashboard_container {
+    width: auto;
+    margin: 20px;
+  }
+
+  .call_container {
+    width: 100%;
+    height: 600px;
+  }
+
+  .videos_container {
+    height: 100%;
+    min-height: 500px;
+    width: auto;
+    margin: 20px;
+  }
+
+  .messenger_container {
+    margin: 40px 20px;
+    height: auto;
+    width: calc(100% - 40px);;
+    max-height: 600px;
+    min-height: 200px;
+    border-radius: 16px;
+    overflow-y: scroll;
+  }
+
+  .checkbox_container {
+    margin-top: 20px;;
+  }
+
+  .new_message_input {
+    padding-right: 60px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .call_buttons_container {
+    width: 295px;
+    height: 50px;
+    bottom: 20px;
+    left: calc(50% - 150px);
+  }
+
+  .finish_chat_button_container {
+    width: 295px;
+    height: 50px;
+    bottom: 20px;
+    left: calc(50% - 150px);
+  }
+
+  .call_button_small {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    transition: 0.3s;
+  }
+
+  .call_button_large {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #fc5d5b;
+    transition: 0.3s;
+  }
+
+  .local_video_container {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .dialog_content {
+    width: 347px;
+    height: 353px;
+  }
+
+  .dialog_button_container {
+    margin-top: 20px;
+  }
+
+  .dialog_image_container {
+    width: 183px;
+    height: 183px;
+    border-radius: 183px;
+  }
+
+  .dialog_accept_call_button {
+    width: 120px;
+    height: 37px;
+    border-radius: 12px;
+  }
+
+  .dialog_reject_call_button {
+    width: 120px;
+    height: 37px;
+    border-radius: 12px;
+  }
+
+  .local_video_container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .call_container {
+    height: 400px;
+  }
+
+  .messenger_container {
+    margin-top: 150px;
+  }
+
 }
